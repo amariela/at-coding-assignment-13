@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# Coding Assignment 12
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to run the React app
 
-## Available Scripts
+1. Open a local terminal.
 
-In the project directory, you can run:
+2. Pull the image from docker:
 
-### `npm start`
+    `docker pull elacodes1/teodocio_aena_coding_assignment12`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Run the image:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    `docker run -p 8083:80 elacodes1/teodocio_aena_coding_assignment12`
 
-### `npm test`
+4. In a local browser, head to `http://localhost:8083/`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## How to run Storybook
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. In addition to the steps above, run this command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    `npm run storybook`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    *make sure you're running the command in the correct folder location.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Folder Structure
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**/.storybook** - contains configuration settings and dependencies needed for running storybook locally.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**/dist** - contains /cjs and /esm directories. Each directory refers to the compiled module system. CJS (CommonJS) and ESM (EcmaScript) modules allow the transpiled JavaScript code from my application to be compatible with various environments.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**/public** - contains static files that are served in the front-end.
 
-## Learn More
+**/src** - contains /components folder which houses all the .types, .test, and .stories code for each component.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+***.config.js** files contain configuration code specific to that tool. For example, babel.config.js contains the module exports required for its presets.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
