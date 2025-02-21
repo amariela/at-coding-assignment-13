@@ -11,7 +11,7 @@ const StyledRetroButton = styled.button<{$disabled: boolean, $backgroundColor: s
     box-shadow: 5px 5px black;
     transition: 0.25s;
     font-weight: bolder;
-    ${props => props.disabled ? 
+    ${props => props.$disabled ? 
         `pointer-events: none;
             background-color: gray;`
         : 
@@ -19,7 +19,7 @@ const StyledRetroButton = styled.button<{$disabled: boolean, $backgroundColor: s
         background-color: ${props.$backgroundColor};`
     }
 
-    ${props => props.disabled ? null : 
+    ${props => props.$disabled ? null : 
         `&:hover {
             color: white;
         }`
