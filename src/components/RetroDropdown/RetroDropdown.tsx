@@ -5,7 +5,6 @@ import styled from 'styled-components';
 // Declare styled-components
 const StyledDropdown = styled.select<{ $disabled: boolean }>`
     font-family: monospace;
-    font-size: 1em;
     padding: 8px;
     margin: 5px;
     border: 1px solid gray;
@@ -18,6 +17,8 @@ const StyledOption = styled.option`
 `;
 
 const StyledLabel = styled.label<{ $backgroundColor: string }>`
+    font-family: monospace;
+    font-size: 1em;
     background-color: ${(props) => props.$backgroundColor || 'transparent'};
     display: inline-block;
     font-weight: bolder;
