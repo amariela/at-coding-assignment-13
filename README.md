@@ -1,11 +1,4 @@
-# Coding Assignment 13
-
-## Steps in the assignment
-
-1. Add and configure Husky.
-
-
-
+# Coding Assignment 12
 
 ## How to run the React app
 
