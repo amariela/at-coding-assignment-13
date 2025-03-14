@@ -26,12 +26,18 @@
     `"format": "prettier . --write"`
     * runs prettier from the root folder and auto fix format errors.
 
-4. Configure Husky with lint-staged.
+4. Configure Husky with lint-staged and test on pre-commit Git hook.
+
     `npx mrm@2 lint-staged`
     * creates a configuration in package.json file for linting staged files.
     * creates /.husky which contains pre-commit hook to run lint-staged.
     * customized the lint-staged script to run "npm run lint" and "npm run format".
 
+    * add `npx jest` in pre-commit hook to run tests
+
+5. Configure GitHub Actions for continuous integration.
+    * create workflow called `node.yaml` in GitHub and add linting test scripts.
+    * to test, you can run `git commit -m "your_message" --no-verify` to bypass the pre-commit hook checks. The build should fail in GitHub.
 
 ## How to run the web React app
 
