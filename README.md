@@ -1,4 +1,10 @@
-# Coding Assignment 12
+# Coding Assignment 13
+
+## Steps for the assignment
+
+1. Configure ESLint.
+    `npm install eslint --save-dev`
+    `npm init @eslint/config`
 
 ## How to run the React app
 
