@@ -6,7 +6,7 @@ import '@testing-library/jest-dom';
 describe("Button component", () => {
 
     afterEach(cleanup);
-    
+
     // Test 1: Check that the component is visible
     test("is visible", () => {
         render(<RetroButton label="Click me" buttonId="button1" backgroundColor="lightblue" disabled={false} />);
@@ -20,4 +20,12 @@ describe("Button component", () => {
         const element = screen.getByRole("button", { name: /Click Me/i });
         expect(element).toHaveStyle("background-color: gray");
     });
+
+    // Test 3: meant to fail to show that pre-commit hook for testing is working
+    // test("changes background color when disabled", () => {
+    //     render(<RetroButton label="Click me" buttonId="button2" backgroundColor="lightblue" disabled={true} />);
+    //     const element = screen.getByRole("button", { name: /Click Me/i });
+    //     expect(element).toHaveStyle("background-color: red");
+    // });
+
 });

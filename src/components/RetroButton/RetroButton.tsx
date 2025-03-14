@@ -2,6 +2,9 @@ import React from 'react';
 import { RetroButtonProps } from './RetroButton.types';
 import styled from 'styled-components';
 
+const randomVariable = 1;
+randomVariable = 2;
+
 // Declare styled-component 
 const StyledRetroButton = styled.button<{$disabled: boolean, $backgroundColor: string}>`
     font-family: monospace;

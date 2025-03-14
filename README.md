@@ -33,19 +33,19 @@
     * customized the lint-staged script to run "npm run lint" and "npm run format".
 
 
-## How to run the React app
+## How to run the web React app
 
 1. Open a local terminal.
 
 2. Pull the image from docker:
 
-    `docker pull elacodes1/teodocio_aena_coding_assignment12`
+    `docker pull elacodes1/teodocio_aena_coding_assignment13`
 
 3. Run the image:
 
-    `docker run -p 8083:80 elacodes1/teodocio_aena_coding_assignment12`
+    `docker run -p 8018:80 elacodes1/teodocio_aena_coding_assignment13`
 
-4. In a local browser, head to `http://localhost:8083/`
+4. In a local browser, head to `http://localhost:8018/`
 
 
 ## How to run Storybook
@@ -53,8 +53,7 @@
 1. In addition to the steps above, run this command:
 
     `npm run storybook`
-
-    *make sure you're running the command in the correct folder location.
+    * make sure you're running the command in the correct folder location.
 
 
 ## Folder Structure

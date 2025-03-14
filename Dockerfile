@@ -3,7 +3,7 @@
 FROM node:22.13.0 AS build
  
 # Set the working directory inside the container
-WORKDIR /teodocio_aena_ui_garden
+WORKDIR /teodocio_aena_ui_garden_build_checks
  
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -22,7 +22,7 @@ RUN npm run build
 FROM nginx:stable-alpine AS production 
 
 # Copies the build output from the previous stage.
-COPY --from=build /teodocio_aena_ui_garden/build /usr/share/nginx/html
+COPY --from=build /teodocio_aena_ui_garden_build_checks/build /usr/share/nginx/html
 
 # App will run on the exposed port
 EXPOSE 80
