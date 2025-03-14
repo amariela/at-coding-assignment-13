@@ -2,11 +2,8 @@ import React from 'react';
 import { RetroButtonProps } from './RetroButton.types';
 import styled from 'styled-components';
 
-const randomVariable = 1;
-randomVariable = 2;
-
 // Declare styled-component 
-const StyledRetroButton = styled.button<{$disabled: boolean, $backgroundColor: string}>`
+const StyledRetroButton = styled.button<{ $disabled: boolean, $backgroundColor: string }>`
     font-family: monospace;
     font-size: 1.5em;
     border: 3px solid black;
@@ -14,15 +11,15 @@ const StyledRetroButton = styled.button<{$disabled: boolean, $backgroundColor: s
     box-shadow: 5px 5px black;
     transition: 0.25s;
     font-weight: bolder;
-    ${props => props.$disabled ? 
+    ${props => props.$disabled ?
         `pointer-events: none;
             background-color: gray;`
-        : 
+        :
         `cursor: pointer;
         background-color: ${props.$backgroundColor};`
     }
 
-    ${props => props.$disabled ? null : 
+    ${props => props.$disabled ? null :
         `&:hover {
             color: white;
         }`
@@ -41,8 +38,8 @@ export default function RetroButton(props: RetroButtonProps) {
         <StyledRetroButton
             $disabled={props.disabled}
             $backgroundColor={props.backgroundColor}
-            disabled = {props.disabled}
-            id = {props.buttonId}
+            disabled={props.disabled}
+            id={props.buttonId}
         >
             {props.label}
         </StyledRetroButton>

@@ -22,7 +22,7 @@
     "rollup": "rollup -c --bundleConfigAsCjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint": "eslint . --fix --max-warnings=0",
+    "lint": "eslint ./src --fix --max-warnings=0",
     "format": "prettier . --write",
     "prepare": "husky install"
   },
@@ -88,7 +88,7 @@
     "react-dom": "^19.0.0"
   },
   "lint-staged": {
-    "*.{js,jsx,tsx}": "npm run lint",
+    "*.{js,mjs,cjs,ts,tsx,jsx}": "npm run lint",
     "*.--write": "npm run format"
   }
 }

@@ -43,7 +43,7 @@ function App() {
     return (
         <div className="App">
             <Container>
-                <h1>Aena's Retro Component Library</h1>
+                <h1>Retro Component Library by Aena</h1>
                 <h3>Take a look at some examples below:</h3>
                 <hr />
                 <ComponentContainer>

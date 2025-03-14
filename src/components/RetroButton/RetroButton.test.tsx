@@ -21,11 +21,4 @@ describe("Button component", () => {
         expect(element).toHaveStyle("background-color: gray");
     });
 
-    // Test 3: meant to fail to show that pre-commit hook for testing is working
-    // test("changes background color when disabled", () => {
-    //     render(<RetroButton label="Click me" buttonId="button2" backgroundColor="lightblue" disabled={true} />);
-    //     const element = screen.getByRole("button", { name: /Click Me/i });
-    //     expect(element).toHaveStyle("background-color: red");
-    // });
-
 });

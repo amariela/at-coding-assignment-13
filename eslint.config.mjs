@@ -2,8 +2,7 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
-
-const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
+import eslintPluginPrettierRecommended from 'eslint-config-prettier';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -12,9 +11,12 @@ export default [
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
     pluginReact.configs.flat.recommended,
-];
-
-module.exports = [
-    // Any other config imports go at the top
     eslintPluginPrettierRecommended,
+    {
+        settings: {
+            react: {
+                version: "detect", // Automatically detect the React version
+            },
+        },
+    },
 ];
