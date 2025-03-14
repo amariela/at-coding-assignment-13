@@ -3,8 +3,31 @@
 ## Steps for the assignment
 
 1. Configure ESLint.
+
     `npm install eslint --save-dev`
     `npm init @eslint/config`
+
+2. Configure Prettier.
+
+    `npm install --save-dev --save-exact prettier`
+
+    * `--save-exact` ensures that everyone will install the same version.
+    * Create .prettierrc.json file that contains basic rules about formatting the code.
+
+    `npm install --save-dev eslint-config-prettier`
+    * allows both ESLint and Prettier to run without stylistic conflicts.
+    * Add Prettier in eslint.config.mjs file.
+
+3. Add lint and format as scripts in package.json.
+
+    `"lint": "eslint . --fix --max-warnings=0"`
+    * runs eslint from the root folder and auto fix error and checks that we don't have any warning
+
+    `"format": "prettier . --write"`
+    * runs prettier from the root folder and auto fix format errors
+
+4. 
+
 
 ## How to run the React app
 
