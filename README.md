@@ -21,12 +21,16 @@
 3. Add lint and format as scripts in package.json.
 
     `"lint": "eslint . --fix --max-warnings=0"`
-    * runs eslint from the root folder and auto fix error and checks that we don't have any warning
+    * runs eslint from the root folder and auto fix error and checks that we don't have any warning.
 
     `"format": "prettier . --write"`
-    * runs prettier from the root folder and auto fix format errors
+    * runs prettier from the root folder and auto fix format errors.
 
-4. 
+4. Configure Husky with lint-staged.
+    `npx mrm@2 lint-staged`
+    * creates a configuration in package.json file for linting staged files.
+    * creates /.husky which contains pre-commit hook to run lint-staged.
+    * customized the lint-staged script to run "npm run lint" and "npm run format".
 
 
 ## How to run the React app
